@@ -3,6 +3,18 @@ require 'pry'
 # ["mi amas vin", "bonan matenon", "pacon", "ĉu vi parolas esperanton"]
 # "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
 
+ESPERANTO_ALPHABET = " abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+
+def alphabetize(arr)
+  arr.sort_by do |a|
+    a.split("").map do |char|
+      binding.pry
+      ESPERANTO_ALPHABET.index(char)
+    end
+  end
+end
+
+
 def alphabetize(array)
   alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
   x = alphabet.split("")
